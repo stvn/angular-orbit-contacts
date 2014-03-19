@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="ao-contact">
+<head>
+  <title>Angular Orbit</title>
+  <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="styles/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/application.css">   
+</head>
+<body>
+  <div ng-view=""></div>
+
+  <!-- VENDOR -->
+  <script type="text/javascript" src="vendor/jquery-2.0.3/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" src="vendor/bootstrap-3.0.0/dist/js/bootstrap.min.js"></script>  
+  <script type="text/javascript" src="vendor/angular-1.2.14/angular.js"></script>
+  <script type="text/javascript" src="vendor/angular-1.2.14/angular-route.js"></script>
+
+  <!-- APP -->
+  <script type="text/javascript"  src="app/app.js"></script>
+  <script type="text/javascript"  src="app/configs/routes.js"></script>
+  <script type="text/javascript"  src="app/configs/fixtures.js"></script>
+
+  <!-- SERVICES -->
+  <script type="text/javascript"  src="app/services/contacts_service.js"></script>
+
+  <!-- CONTROLLERS -->
+  <script type="text/javascript"  src="app/controllers/contacts_controller.js"></script>
+</body>
+</html>

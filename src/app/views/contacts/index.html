@@ -1,0 +1,15 @@
+<header class="navbar navbar-static-top bs-docs-nav small" role="banner">
+  <h1>contacts</h1>
+</header>
+
+<table class="table table-condensed bordered icon-list ">
+  <tbody>
+    <tr ng-repeat="contact in contacts" class="contact-row container-fluid" ng-click="show(contact.id, $event)">
+      <td class="col-md-1"><input type="checkbox" /></td>
+      <td class="col-md-1"><img ng-src="/images/{{contact.avatar}}" class="avatar" /></td>
+      <td class="col-md-6">{{contact.firstName}} {{contact.middleName}} {{contact.lastName}}</td>
+      <td class="col-md-2"><a href="mailto:{{contact.email}}">{{contact.email}}</a></td>
+      <td class="col-md-1"><span class="fa fa-chevron-right"></span></td>
+    </tr>    
+  </tbody>
+</table>

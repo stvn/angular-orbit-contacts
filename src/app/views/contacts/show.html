@@ -1,0 +1,93 @@
+<header class="container-fluid large">
+  <img ng-src="/images/{{contact.avatar}}" class="col-md-1">
+  <div class="col-xs-11">
+    <h2>{{contact.firstName}} {{contact.middleName}} {{contact.lastName}}</h2>
+    <h4 class="muted">{{contact.title}}</h4>
+  </div> 
+</header>
+
+<section class="container margin-top" ng-controller="ContactsController">
+  <form class="form-horizontal" role="form">
+
+    <h4>Personal Info</h4>
+
+    <div class="form-group">
+      <label for="inputFirstName" class="col-sm-1 control-label">First</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="inputFirstName" placeholder="Line 1" ng-model="contact.firstName">
+      </div>
+
+      <label for="inputMiddleName" class="col-sm-1 control-label">Middle</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="inputMiddleName" placeholder="Line 1" ng-model="contact.middleName">
+      </div>      
+
+      <label for="inputLastName" class="col-sm-1 control-label">Last</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="inputLastName" placeholder="Line 1" ng-model="contact.lastName">
+      </div>      
+    </div>
+
+    <div class="form-group">
+      <label for="inputPhonePrimary" class="col-sm-1 control-label">Phone 1</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="inputPhonePrimary" placeholder="Line 1" ng-model="contact.phones[0]">
+      </div>
+
+      <label for="inputPhoneSecondary" class="col-sm-1 control-label">Phone 2</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="inputPhoneSecondary" placeholder="Line 1" ng-model="contact.phones[1]">
+      </div>      
+
+      <label for="inputPhoneWork" class="col-sm-1 control-label">Phone 3</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="inputPhoneWork" placeholder="Line 1" ng-model="contact.phones[2]">
+      </div>            
+    </div>    
+ 
+
+    <hr />
+    
+    <h4>Address</h4>
+
+    <div class="form-group">
+      <label for="inputAddressLine1" class="col-sm-1 control-label">Line 1</label>
+      <div class="col-sm-11">
+        <input type="text" class="form-control" id="inputAddressLine1" placeholder="Line 1" ng-model="contact.address.line1">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="inputAddressLine2" class="col-sm-1 control-label">Line 2</label>
+      <div class="col-sm-11">
+        <input type="text" class="form-control" id="inputAddressLine2" placeholder="Line 2" ng-model="contact.address.line2">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="inputAddressCity" class="col-sm-1 control-label">City</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="inputAddressCity" placeholder="City" ng-model="contact.address.city">
+      </div>
+
+      <label for="inputAddressState" class="col-sm-1 control-label">State</label>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" id="inputAddressState" placeholder="State" ng-model="contact.address.state">
+      </div>      
+
+      <label for="inputAddressZip" class="col-sm-2 control-label">Postal Code</label>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" id="inputAddressZip" placeholder="Postal Code" ng-model="contact.address.postalCode">
+      </div>      
+    </div>
+    <hr />
+    <div class="form-group">
+      <div class="pull-right">
+        <button type="submit" class="btn btn-default">Save</button>
+      </div>
+    </div>
+  </form>
+
+
+</section>
+
